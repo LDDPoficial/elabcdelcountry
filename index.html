@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El ABC del Country</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Montserrat:wght@300;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <img src="logo.png" alt="Logo El ABC del Country" class="logo" />
+    <h1>El ABC del Country</h1>
+
+    <nav>
+      <div class="menu-toggle" id="menu-toggle">
+        ☰
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quienes-somos">Quiénes Somos</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#redes">Redes Sociales</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner principal -->
+  <section id="inicio" class="banner">
+    <h2>Manualidades en MDF con estilo country</h2>
+  </section>
+
+  <!-- Sección: Quiénes somos -->
+  <section id="quienes-somos" class="contenido">
+    <h3>Quiénes Somos</h3>
+    <p>Somos una tienda especializada en manualidades decorativas en MDF. Diseñamos, pintamos y personalizamos piezas únicas con un estilo country encantador. Apoyamos el arte hecho a mano y te ayudamos a decorar con amor.</p>
+  </section>
+
+  <!-- Sección: Galería -->
+  <section id="galeria" class="contenido">
+    <h3>Galería de Productos</h3>
+    <div class="galeria">
+      <img src="Producto1.jpeg" alt="Producto1" />
+      <img src="Producto2.jpeg" alt="Producto2" />
+      <img src="Producto3.jpeg" alt="Producto3" />
+      <img src="Producto4.jpeg" alt="Producto4" />
+      <img src="Producto5.jpeg" alt="Producto5" />
+      <img src="Producto6.jpeg" alt="Producto6" />
+      <img src="Producto7.jpeg" alt="Producto7" />
+      <img src="Producto8.jpeg" alt="Producto8" />
+      <img src="Producto9.jpeg" alt="Producto 9" />
+      <img src="Producto10.jpeg" alt="Producto 10" />
+    </div>
+  </section>
+
+  <!-- Sección: Contacto -->
+  <section id="contacto" class="contenido">
+    <h3>¡Contáctanos y personaliza tu pieza!</h3>
+    <p>¿Quieres más información o hacer un pedido? Escríbenos directamente por WhatsApp.</p>
+    <a href="https://wa.me/573112284295" class="whatsapp-btn">Escríbenos por WhatsApp</a>
+  </section>
+
+  <!-- Sección: Redes Sociales -->
+  <section id="redes" class="contenido">
+    <h3>Síguenos en nuestras redes sociales</h3>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/elabcdelcountrymanualidades/" target="_blank">
+        <img src="Instagram.png" alt="Instagram" />
+      </a>
+      <a href="https://www.facebook.com/elabcdelcountry" target="_blank">
+        <img src="facebook.png" alt="Facebook" />
+      </a>
+      <a href="https://www.tiktok.com/@elabcdelcountry" target="_blank">
+        <img src="tiktok.png" alt="TikTok" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Sección: Ubicación -->
+  <section id="ubicacion" class="contenido">
+    <h3>¿Dónde estamos?</h3>
+    <p>📍 Calle 29A Sur #26C-03, Bogotá</p>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Calle+29A+Sur+%2326C-03,+Bogotá&output=embed" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 El ABC del Country - Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    // Menú hamburguesa
+    const toggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    // Deslizamiento suave
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        document.querySelector(link.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+        navLinks.classList.remove('show');
+      });
+    });
+  </script>
+
+</body>
+</html>
